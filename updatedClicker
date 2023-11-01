@@ -1,4 +1,5 @@
-from tkinter import *                                          
+from tkinter import *     
+from PIL import Image, ImageTk                                  
                                                                
 points = 0                                                     
 pointsPerClick = 1                                             
@@ -25,9 +26,14 @@ def Computer_Click():
     res = "Amount of points: " + str(points)                   
     score.configure(text=res)                                  
     #print(points)                                              
-                                                               
+
+# Clicker Icon Image
+imageIcon = Image.open("images/ComputerIcon.png")
+imageIcon.resize((50,50), Image.Resampling.LANCZOS)
+computerIcon = ImageTk.PhotoImage(imageIcon)
+
 # Button for Icon                                              
-icon = Button(window, text="Click", command=lambda: Computer_Click())                            
+icon = Button(window, image=computerIcon, text="Click", command=Computer_Click)                            
 icon.place(x=200, y=200)                                       
                                                                
 #Point label                                                   
@@ -44,3 +50,8 @@ ShopWindow = Tk()
 window.geometry('420x420')                                     
 window.title("The Shop.")                                      
 window.configure(bg="grey")                                    
+
+
+# HR: https://stackoverflow.com/questions/47357090/tkinter-error-couldnt-recognize-data-in-image-file
+# https://github.com/python-pillow/Pillow/issues/6200
+# https://stackoverflow.com/questions/6582387/image-resize-under-photoimage
