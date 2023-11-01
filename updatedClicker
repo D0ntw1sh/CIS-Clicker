@@ -1,0 +1,38 @@
+from tkinter import *                                           
+                                                                
+points = 0                                                      
+pointsPerClick = 1                                              
+totalCLicks = 0                                                 
+                                                                
+# create root window                                            
+window= Tk()                                                    
+window.geometry('420x420')                                      
+window.title("Computer Clicker")                                
+                                                                
+#color of window                                                
+window.configure(bg="grey")                                     
+#label                                                          
+label=Label(window, text="Welcome to Cookie Clicker").pack()    
+                                                                
+#button for shop                                                
+button=Button(window, text="Shop",command = window.destroy)     
+button.place(x=350,y=20)                                        
+                                                                
+# Button for Icon                                               
+icon = Button(window, text="Click")                             
+icon.place(x=200, y=200)                                        
+                                                                
+#Point label                                                    
+score = Label(window, text="Amount of points: " + str(points))  
+score.place(x=150, y=100)                                       
+                                                                
+                                                                
+window.mainloop()                                               
+                                                                
+#shop window                                                    
+                                                                
+ShopWindow = Tk()                                               
+                                                                
+window.geometry('420x420')                                      
+window.title("The Shop.")                                       
+window.configure(bg="grey")                                     
