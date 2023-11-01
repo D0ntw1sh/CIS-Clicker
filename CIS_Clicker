@@ -17,6 +17,14 @@ button.place(x=350,y=20)
 
 window.mainloop()
 
+#shop window
+
+ShopWindow = Tk()
+
+window.geometry('420x420')
+window.title("The Shop.")
+window.configure(bg="grey")
+
 
 
 
