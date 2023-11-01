@@ -13,7 +13,8 @@ window.title("Computer Clicker")
 #color of window                                               
 window.configure(bg="grey")                                    
 #label                                                         
-label=Label(window, text="Welcome to Cookie Clicker").pack()   
+label=Label(window, text="Welcome to CIS Clicker")
+label.pack()   
                                                                
 #button for shop                                               
 button=Button(window, text="Shop",command = window.destroy)    
@@ -38,7 +39,9 @@ icon.place(x=200, y=200)
                                                                
 #Point label                                                   
 score = Label(window, text="Amount of points: " + str(points)) 
-score.place(x=150, y=100)                                      
+score.place(x=150, y=100)
+score.configure(bg="grey")   
+label.configure(bg="grey")                                
                                                                
                                                                
 window.mainloop()                                              
