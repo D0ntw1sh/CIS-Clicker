@@ -24,7 +24,7 @@ def Computer_Click():
     points += pointsPerClick                                   
     res = "Amount of points: " + str(points)                   
     score.configure(text=res)                                  
-    print(points)                                              
+    #print(points)                                              
                                                                
 # Button for Icon                                              
 icon = Button(window, text="Click", command=lambda: Computer_Click())                            
