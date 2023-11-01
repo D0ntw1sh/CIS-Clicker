@@ -1,1 +1,26 @@
-e
+from tkinter import *
+
+# create root window
+window= Tk()
+window.geometry('420x420')
+window.title("Computer Clicker")
+
+#color of window
+window.configure(bg="grey")
+#label
+label=Label(window, text="Welcome to Cookie Clicker").pack()
+
+#button for shop
+button=Button(window, text="Shop",command = window.destroy)
+button.place(x=350,y=20)
+
+
+window.mainloop()
+
+
+
+
+
+
+
+
