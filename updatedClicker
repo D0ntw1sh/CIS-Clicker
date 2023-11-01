@@ -18,14 +18,16 @@ label=Label(window, text="Welcome to Cookie Clicker").pack()
 button=Button(window, text="Shop",command = window.destroy)    
 button.place(x=350,y=20)                                       
                                                                
-def Computer_Click(points, pointsPerClick):                    
+def Computer_Click():      
+    global points
+    global pointsPerClick              
     points += pointsPerClick                                   
     res = "Amount of points: " + str(points)                   
     score.configure(text=res)                                  
     print(points)                                              
                                                                
 # Button for Icon                                              
-icon = Button(window, text="Click")                            
+icon = Button(window, text="Click", command=lambda: Computer_Click())                            
 icon.place(x=200, y=200)                                       
                                                                
 #Point label                                                   
